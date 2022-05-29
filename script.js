@@ -38,7 +38,11 @@ function createATag(item) {
 
 // creating img tag
 function createImgTag(item) {
-    document.getElementById('slider-content').style.backgroundImage = 'url('+item.imageUrl+')';
+    let imgDiv = document.createElement('div');
+    imgDiv.classList.add('image-box');
+    imgDiv.style.backgroundImage = 'url('+item.imageUrl+')';
+
+    return imgDiv;
 }
 
 // creating title tag
@@ -72,11 +76,12 @@ function createDots() {
 function setSlider() {
     sliderContent.innerHTML = ' ';
     let slideItem = createATag(data[sliderIndex]);
-    let imgTag = createImgTag(data[sliderIndex]);
+    let imgDiv = createImgTag(data[sliderIndex]);
     let tagTitle = createH2Tag(data[sliderIndex]);
     let dots = createDots(data[sliderIndex]);
 
     slideItem.appendChild(tagTitle);
+    slideItem.appendChild(imgDiv);
     sliderContent.appendChild(slideItem);
     sliderContent.appendChild(dots);
 
