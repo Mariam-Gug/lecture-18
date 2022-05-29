@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+body,html,
+.bg-wrapper,
+.image-slide,
+.slider-content,
+.slide {
+    height: 100%;
+    width: 100%;
+}
+.bg-wrapper {
+    background-image: linear-gradient(to bottom right, #000, rgb(43, 41, 41));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-wrapper {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    box-shadow: 0 0 50px #000;
+    border-radius: 20px;
+}
+.arrow {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+}
+.left-arrow {
+    top: 50%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+.right-arrow {
+    top: 50%;
+    left: 95%;
+    transform: translateX(-50%);
+}
+.slider-content {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: cover;
+    border-radius: 20px;
+}
+.slider-title {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Smooch', cursive;
+    text-transform: capitalize;
+}
+.dots {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+.dot {
+    height: 10px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: rgb(143, 143, 143);
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #fff;
+}
+
